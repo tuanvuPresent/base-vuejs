@@ -1,10 +1,12 @@
 <template>
-    <HomeForm/>
+    <div>
+        <HomeForm/>
+    </div>
 </template>
 
 <script lang="ts">
-    import {createComponent, onMounted,} from "@vue/composition-api";
-    import HomeForm from "../../components/Home/HomeForm.vue";
+    import {createComponent, onMounted} from "@vue/composition-api";
+    import HomeForm from "@/components/Home/HomeForm.vue";
 
     export default createComponent({
         setup() {
