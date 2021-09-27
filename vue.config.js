@@ -1,8 +1,4 @@
 module.exports = {
-  "transpileDependencies": [
-    "vuetify"
-  ],
-  devServer: {
-    disableHostCheck: true
-  }
+  publicPath: process.env.NODE_ENV === "production" ? "/base-source-vuejs/" : "/",
+  outputDir: 'docs',
 }
