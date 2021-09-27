@@ -43,13 +43,6 @@
                     {
                         title: 'Home', icon: 'mdi-home', to: '/',
                     },
-                    {
-                        title: 'Login', icon: 'mdi-book', to: '/login',
-                        sub_links: [
-                            {title: 'login', icon: 'mdi-book', to: '/login',},
-                            {title: 'register', icon: 'mdi-book', to: '/register',}
-                        ]
-                    },
                 ],
                 mini: true,
             }

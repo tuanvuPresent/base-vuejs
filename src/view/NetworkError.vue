@@ -1,5 +1,5 @@
 <template>
-    <span>Login Form</span>
+    <div>500 NetworkError</div>
 </template>
 
 <script lang="ts">
@@ -7,16 +7,12 @@
 
     export default createComponent({
         setup() {
-
             onMounted(() => {
             });
-
             return {};
         },
-        components: {}
     });
 </script>
 
 <style lang="scss" scoped>
-    /*@import "";*/
 </style>

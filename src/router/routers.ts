@@ -17,8 +17,12 @@ const routes = [
         path: "/",
         component: () => import("@/layouts/NoneLayout.vue"), children: [
             {
-                path: "login",
-                component: () => import("@/view/Authentication/Login.vue"),
+                path: "network-error",
+                component: () => import("@/view/NetworkError.vue"),
+            },
+            {
+                path: "*",
+                component: () => import("@/view/NotFound.vue"),
             },
         ]
     }
