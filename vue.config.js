@@ -4,5 +4,11 @@ module.exports = {
   ],
   devServer: {
     disableHostCheck: true
-  }
+  },
+  chainWebpack: (config) => {
+    config.plugin('html').tap((options) => {
+      options[0].title = 'Demo Test';
+      return options;
+    });
+  },
 }

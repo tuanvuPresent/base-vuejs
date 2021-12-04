@@ -1,16 +1,14 @@
 import db from "@/firebase/db";
-import {ref} from '@vue/composition-api';
+import { ref } from '@vue/composition-api';
 
 let userList = ref([]);
 
 const addUser = (name: string, age: number) => {
-    db.ref('users').push({name: name, age: age})
-        .then(() => {
-            console.log('success')
-        })
-        .catch((error) => {
-            console.log('error')
-        })
+    db.ref('users').push({ name: name, age: age }).then(() => {
+        console.log('success')
+    }).catch((error) => {
+        console.log('error')
+    })
 }
 
 const getUser = () => {
@@ -27,26 +25,19 @@ const getUser = () => {
 }
 
 const updateUser = (id: string, name: string, age: number) => {
-    db.ref('users').child(id).set({
-        name: name,
-        age: age
+    db.ref('users').child(id).set({ name: name, age: age }).then(() => {
+        console.log('success')
+    }).catch((error) => {
+        console.log(error)
     })
-        .then(() => {
-            console.log('success')
-        })
-        .catch((error) => {
-            console.log(error)
-        })
 }
 
 const deleteUser = (id: string) => {
-    db.ref('users').child(id).remove()
-        .then(() => {
-            console.log('success')
-        })
-        .catch((error) => {
-            console.log(error)
-        })
+    db.ref('users').child(id).remove().then(() => {
+        console.log('success')
+    }).catch((error) => {
+        console.log(error)
+    })
 }
 
 const headerUser = [
@@ -55,24 +46,21 @@ const headerUser = [
         value: "name",
         sortable: true,
         align: "start"
-    },
-    {
+    }, {
         text: "age",
         value: "age",
         sortable: true,
         align: "start"
-    },
-    {
+    }, {
         text: "",
         value: "delete",
         align: "start",
-        sortable: false,
-    },
-    {
+        sortable: false
+    }, {
         text: "",
         value: "edit",
         align: "start",
-        sortable: false,
+        sortable: false
     },
 ]
 

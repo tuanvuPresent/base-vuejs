@@ -1,5 +1,5 @@
-import {InjectionKey} from "@vue/composition-api";
-import {Demo} from "@/stores/demo";
+import { InjectionKey } from "@vue/composition-api";
+import { Demo } from "@/stores/demo";
 
 const DemoKey: InjectionKey<Demo> = Symbol("Demo");
 

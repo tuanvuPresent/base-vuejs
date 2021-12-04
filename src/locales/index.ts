@@ -8,13 +8,13 @@ Vue.use(VueI18n)
 
 const messages = {
   vi: viMessage,
-  en: enMessage,
+  en: enMessage
 };
 
 let i18n = new VueI18n({
   locale: 'vi', // set locale
   messages,
-  fallbackLocale: 'vi',
+  fallbackLocale: 'vi'
 });
 
 export default i18n

@@ -1,17 +1,15 @@
 <template>
-    <div>{{ $t('hello') }}</div>
+  <div>{{ $t("hello") }}</div>
 </template>
 
 <script lang="ts">
-import {createComponent, onMounted} from "@vue/composition-api";
+import { createComponent, onMounted } from "@vue/composition-api";
 export default createComponent({
-    setup() {
-        onMounted(() => {
-        });
-        return {
-        };
-    },
-    components: {}
+  setup() {
+    onMounted(() => {});
+    return {};
+  },
+  components: {},
 });
 </script>
 
