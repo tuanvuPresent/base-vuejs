@@ -1,4 +1,4 @@
-# example_vuejs
+# Example vuejs
 
 ## Project setup
 ```
