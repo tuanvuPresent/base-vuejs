@@ -1,17 +1,20 @@
 version: 2.1
 
+executors:
+    default:
+        docker:
+            - image: circleci/php:7.3-node-browsers
+    python3:
+        docker:
+            - image: circleci/python:3.6.4
 jobs:
   build:
     working_directory: ~/circleci-python
-    docker:
-      - image: "circleci/python:3.6.4"
     steps:
       - checkout
       - run: npm run install
   deploy:
     working_directory: ~/circleci-python
-    docker:
-      - image: "circleci/python:3.6.4"
     steps:
       - checkout
       - run: npm run build
