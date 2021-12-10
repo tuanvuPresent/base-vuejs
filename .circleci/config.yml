@@ -12,7 +12,7 @@ jobs:
     working_directory: ~/circleci-python
     steps:
       - checkout
-      - run: npm run install
+      - run: npm install
   deploy:
     working_directory: ~/circleci-python
     steps:
