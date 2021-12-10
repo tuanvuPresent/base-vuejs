@@ -19,16 +19,16 @@ workflows:
   build:
     jobs:
       - build
-      - build:
-          filters:
-            branches:
-              only:
-                - deploy/github-page
+#       - build:
+#           filters:
+#             branches:
+#               only:
+#                 - deploy/github-page
   deploy:
     jobs:
       - deploy
-      - deploy:
-          filters:
-            branches:
-              only:
-                - deploy/github-page
+#       - deploy:
+#           filters:
+#             branches:
+#               only:
+#                 - deploy/github-page
