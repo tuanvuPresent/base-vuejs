@@ -22,16 +22,6 @@ workflows:
   build:
     jobs:
       - build
-      - build:
-          filters:
-            branches:
-              only:
-                - deploy/*
   deploy:
     jobs:
       - deploy
-      - deploy:
-          filters:
-            branches:
-              only:
-                - deploy/*
