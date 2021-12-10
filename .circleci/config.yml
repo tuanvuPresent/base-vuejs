@@ -23,7 +23,7 @@ workflows:
           filters:
             branches:
               only:
-                - deploy/*
+                - deploy/github-page
   deploy:
     jobs:
       - deploy
@@ -31,4 +31,4 @@ workflows:
           filters:
             branches:
               only:
-                - deploy/*
+                - deploy/github-page
