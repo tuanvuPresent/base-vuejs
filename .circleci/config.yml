@@ -1,0 +1,34 @@
+version: 2.1
+
+jobs:
+  build:
+    working_directory: ~/circleci-python
+    docker:
+      - image: "circleci/python:3.6.4"
+    steps:
+      - checkout
+      - run: npm run install
+  deploy:
+    working_directory: ~/circleci-python
+    docker:
+      - image: "circleci/python:3.6.4"
+    steps:
+      - checkout
+      - run: npm run build
+workflows:
+  build:
+    jobs:
+      - build
+      - build:
+          filters:
+            branches:
+              only:
+                - deploy/*
+  deploy:
+    jobs:
+      - deploy
+      - deploy:
+          filters:
+            branches:
+              only:
+                - deploy/*
